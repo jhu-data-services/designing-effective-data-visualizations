@@ -1,0 +1,110 @@
+---
+title: "Desigining Effective Data Visualizations `r emo::ji('bar_chart')`"
+subtitle: "A Software Agnostic Workshop"
+author: "Pete Lawson, Ph.D."
+institute: "JHU Data Services"
+date: "November 1<sup>st</sup>, 2022"
+output:
+  xaringan::moon_reader:
+    css: ["css/slides-style.css", "css/xaringan-themer.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: solarized-light
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+---
+
+```{r child = "setup.Rmd"}
+```
+
+```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(magick)
+library(knitr)
+library(icons)
+```
+
+class: top
+
+## Workshop guidelines
+
+- **Workshop will be recorded.** We will make our best effort to respect the privacy of participants. Chat will not be recorded. 
+
+.pull-left[
+- **Help** is always available.
+  - Use the Zoom chat (private or public) to ask a question.
+  - Raise your hand `r emo::ji('raised_back_of_hand')`.
+  - And you can always un-mute and ask.
+]
+
+.pull-right[
+<blockquote>
+Help will always be given at Hogwarts to those who ask for it.
+.right[-- <cite>Albus Dumbledore</cite>]
+</blockquote>
+]
+
+---
+
+class: middle
+
+# Data visualization
+
+---
+
+## Data visualization
+
+> *"The simple graph has brought more information to the data analyst’s mind than any other device." — John Tukey*
+
+- Data visualization is the creation and study of the visual representation of data.
+- There are many tools for visualizing data (R is one of them), and many approaches/systems within R for making data visualizations (**ggplot2** is one of them, and that's what we're going to use).
+
+---
+
+## ggplot2 $\in$ tidyverse
+
+.pull-left[
+# ```{r echo=FALSE, out.width="80%",fig.align="center"}
+# knitr::include_graphics("img/ggplot2-part-of-tidyverse.png")
+# ```
+]
+.pull-right[
+```{r message=FALSE}
+library(tidyverse)
+```
+- **ggplot2** is tidyverse's data visualization package
+- The `gg` in "ggplot2" stands for Grammar of Graphics
+- It is inspired by the book **Grammar of Graphics** by Leland Wilkinson
+]
+
+---
+
+## Grammar of Graphics
+
+A grammar of graphics is a tool that enables us to concisely describe the components of a graphic.
+
+# ```{r echo=FALSE, out.width="60%",fig.align="center"}
+# knitr::include_graphics("img/grammar-of-graphics.png")
+# ```
+
+.footnote[ 
+Source: [BloggoType](http://bloggotype.blogspot.com/2016/08/holiday-notes2-grammar-of-graphics.html)
+]
+
+---
+
+
+class: middle
+
+# Questions?
+
+.footnote[
+Please complete the survey for this workshop:<br> [bit.ly/ggplot2-survey](bit.ly/ggplot2-survey)
+]
+---
